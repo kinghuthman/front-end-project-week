@@ -21,7 +21,7 @@ class NoteView extends Component {
             <div className = "note-page-wrap" >
                 <div className={this.state.modal ? "modal display" : "modal"}>                
                     <div className="modal-content">                        
-                        <p>Are you sure you want to delete this?</p>
+                        <p>Are you sure you want to delete this???</p>
                         <div className="modal-btns">
                             <Link to = '/'>
                                 <button className="delete-btn" onClick = {this.props.handleDelete}>Delete</button>
