@@ -11,6 +11,7 @@ export const DELETED_NOTE = 'DELETED_NOTE';
 export const SELECT_ID = 'SELECT_ID';
 export const ERROR = 'ERROR';
 
+
 export const fetchNotes = () => {
     const request = axios.get(`http://localhost:3333/notes`)
     return (dispatch) => {
@@ -27,7 +28,7 @@ export const fetchNotes = () => {
   };
  
 export const addNote = note => {
-    const request = axios.post(`http://localhost:3333/notes`, note)
+    const request = axios.post(`https://killer-notes.herokuapp.com/note/get/all`, note)
     return (dispatch) => {
         request.then(({data})=> {                   
            dispatch({type: ADD_NOTE, payload: data})
