@@ -29,7 +29,7 @@ export const fetchNotes = () => {
 export const addNote = note => {
     const request = axios.post(`http://localhost:3333/notes`, note)
     return (dispatch) => {
-        request.then(({data})=> {
+        request.then(({data})=> {                   
            dispatch({type: ADD_NOTE, payload: data})
         })
         .then(()=>{
@@ -48,7 +48,7 @@ export const selectId = id => ({
 export const editNote = (id, note) => {
     const request = axios.put(`http://localhost:3333/notes/${id}`, note)
     return (dispatch) => {
-        request.then(({data})=> {
+        request.then(({data})=> {                      
            dispatch({type: EDIT_NOTE, payload: data})
         })
         .then(()=>{
@@ -62,7 +62,7 @@ export const editNote = (id, note) => {
 export const deleteNote = id => {    
     const request = axios.delete(`http://localhost:3333/notes/${id}`)
     return (dispatch) => {
-        request.then(({data})=> {
+        request.then(({data})=> {console.log(data)
            dispatch({type: DELETING_NOTE, payload: data})
         })
         .then(()=>{
