@@ -25,7 +25,7 @@ class NoteList extends Component {
                     )}
                 </div>
             </div>
-         :<div>
+         :<div className = "loading">
          Loading...
         </div>   
         )
