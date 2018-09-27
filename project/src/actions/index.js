@@ -13,7 +13,7 @@ export const ERROR = 'ERROR';
 
 
 export const fetchNotes = () => {
-    const request = axios.get(`http://localhost:3333/notes`)
+    const request = axios.get(`https://killer-notes.herokuapp.com/note/get/all`)
     return (dispatch) => {
         request.then(({data})=> {
            dispatch({type: FETCH_NOTE, payload: data})
